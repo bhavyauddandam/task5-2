@@ -1,0 +1,48 @@
+<html>
+<head>
+<script>
+function calculate(){
+    var num1 = parseFloat(document.getElementById("n1").value);
+    var num2 = parseFloat(document.getElementById("n2").value);
+    var op = document.getElementById("op").value;
+    var result;
+
+    if(op == "+"){
+        result = num1 + num2;
+    }
+    else if(op == "-"){
+        result = num1 - num2;
+    }
+    else if(op == "*"){
+        result = num1 * num2;
+    }
+    else if(op == "/"){
+        result = num1 / num2;
+    }
+
+    document.getElementById("res").innerHTML = "Result: " + result;
+}
+</script>
+</head>
+
+<body>
+
+<h1>Simple Calculator</h1>
+
+<input type="number" id="n1" placeholder="Enter first number"><br><br>
+
+<input type="number" id="n2" placeholder="Enter second number"><br><br>
+
+<select id="op">
+    <option value="+">Addition (+)</option>
+    <option value="-">Subtraction (-)</option>
+    <option value="*">Multiplication (*)</option>
+    <option value="/">Division (/)</option>
+</select><br><br>
+
+<button onclick="calculate()">Calculate</button>
+
+<p id="res"></p>
+
+</body>
+</html>
